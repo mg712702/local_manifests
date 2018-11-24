@@ -15,6 +15,9 @@
   <!-- Apps -->
   <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" />
 
+  <!-- Binary -->
+  <project path="system/extras/su" name="LineageOS/android_system_extras_su" />
+
   <!-- HAL -->
   <project path="vendor/qcom/opensource/cryptfs_hw" name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" />
 </manifest>

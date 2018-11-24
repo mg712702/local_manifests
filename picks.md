@@ -3,37 +3,36 @@ repopick 225463
 ### build/make
 repopick 222760
 ### frameworks/base
-repopick 226343 226600 231824 231823 226236 227821 229230 229612 231796 231797
+repopick 226343 226600 226236 227108 227821 229230 229612 
 ### frameworks/native
 repopick 224530 225542 225543 225546
 ### frameworks/opt/datetimepicker
 repopick 225549
 ### hardware/interfaces
 repopick 225506 225507
-### hardware/qcom/fm
-repopick 232924
 ### sepolicy - qcom-legacy
 repopick -t pie-qcom-legacy-sepolicy -e 228608,230832,231049,230831,230833
 ### sepolicy - system,qcom
-repopick -t pie-qcom-sepolicy -e 228567,228588,225945,229248,229249,225832,228563,228587,228579
+repopick -t pie-qcom-sepolicy -e 228567,228588,225945,229248,229249,225832,228563,228587,228579,228571,228575
 ### system/core
 repopick 223085
 ### vendor/lineage
-repopick 231599 232659
+repopick 231599 227392 225921
 
 ## List of FEATURES ##
 ### ANT+
 repopick 227260 227261
-### Recovery Pathmap
-repopick -t pie-recovery-pathmap
-### QCOM FDE
-repopick -t pie-hw-fde -e 226112
+### Battery Styles
+repopick -t pie-battery-styles -e 227929
 ### FBE Wrapped Key
 repopick -t fbe-wrapped-key
-### Battery Styles
-repopick -t pie-battery-styles
-### November ASB
-###repopick -p -t android-9.0.0_r16
+### IOSCHED SEPolicy
+repopick -t pie-lineage-iosched-sepolicies
+### QCOM FDE
+repopick -t pie-hw-fde -e 226112
+repopick -t pie-fde-crash-fix -e 234395
+### Recovery Pathmap
+repopick -t pie-recovery-pathmap
 
 ## List of QCOM HALs ##
 ### msm8916 CAF audio hal
@@ -54,8 +53,6 @@ repopick -t pie-calculator
 ### DocUI
 repopick -t pie-documentsui
 ### Gallery2
-repopick -p 234176
+repopick -p 233100
 ### Snap
-repopick -p 233336
-### Trebuchet
-repopick -p 233130
+repopick -p 233223
