@@ -46,7 +46,8 @@ Then to sync up:
 
 Don't forget to bake the pie with filling!
 
-    source <(curl -s https://raw.githubusercontent.com/mg712702/local_manifests/lineage-16.0/picks.md)
+    wget https://raw.githubusercontent.com/mg712702/local_manifests/lineage-16.0/0001-update-metadata-url.patch
+    bash <(curl -s https://raw.githubusercontent.com/mg712702/local_manifests/lineage-16.0/patch.sh)
 
 Now to start the build:
 
@@ -56,5 +57,3 @@ $ . build/envsetup.sh
 $ lunch lineage_<device-name>-userdebug
 $ mka bacon -j8
 ```
-
-![Android Pie](https://developer.android.com/static/images/home/android-p-clear-bg-with-shadow-@1x.png "Android 9 Pie")
