@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Device repos -->
+  <project name="mg712702/android_device_asus_Z00L" path="device/asus/Z00L" remote="github" revision="8.1.x" />
+  <project name="mg712702/android_device_asus_Z00T" path="device/asus/Z00T" remote="github" revision="8.1.x" />
+  <project name="mg712702/android_device_asus_msm8916-common" path="device/asus/msm8916-common" remote="github" revision="8.1.x" />
+  <project name="mg712702/android_kernel_asus_msm8916" path="kernel/asus/msm8916" remote="github" revision="minimal" />
+  <project name="mg712702/proprietary_vendor_asus" path="vendor/asus" remote="github" revision="8.1.x" />
+
+  <!-- Additional LineageOS repos -->
+  <project name="LineageOS/android_external_bson" path="external/bson" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" revision="lineage-15.1" />
+</manifest>
