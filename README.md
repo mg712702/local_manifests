@@ -1,4 +1,4 @@
-AOSPExtended Oreo For Z00L & Z00T
+AOSPExtended Pie For Z00L & Z00T
 =======================
 
 Current Status
@@ -22,7 +22,7 @@ Current Status
 Downloads
 --------
 
-You Can Download My Builds From XDA Thread [Here](https://forum.xda-developers.com/zenfone-2-laser/development/rom-aospextended-rom-v5-7-t3821102)
+You Can Download My Builds From XDA Thread [Here](https://forum.xda-developers.com/zenfone-2-laser/development/rom-aospextended-rom-v6-2-t3890825)
 
 Build Instructions
 ------------------
@@ -33,12 +33,12 @@ Create a build directory
 
 To initialize your local repository using the AOSPExtended trees, use a command like this:
 
-    repo init -u git://github.com/AospExtended/manifest.git -b 8.1.x
+    repo init -u git://github.com/AospExtended/manifest.git -b 9.x
 
 Then:
 
     mkdir .repo/local_manifests
-    wget -O .repo/local_manifests/manifest.xml https://raw.githubusercontent.com/mg712702/local_manifests/8.1.x/manifest.xml
+    wget -O .repo/local_manifests/manifest.xml https://raw.githubusercontent.com/mg712702/local_manifests/9.x/manifest.xml
 
 Then to sync up:
 
