@@ -44,6 +44,11 @@ Then to sync up:
 
     repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
 
+Don't forget to bake the pie with filling!
+
+    wget https://raw.githubusercontent.com/mg712702/local_manifests/9.x/5ad0911adc0ecd1954b47cbc1b82ad8c9a9be516.patch
+    bash <(curl -s https://raw.githubusercontent.com/mg712702/local_manifests/9.x/patch.sh)
+
 Now to start the build:
 
 ```

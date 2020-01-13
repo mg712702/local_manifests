@@ -1,0 +1,32 @@
+From 5ad0911adc0ecd1954b47cbc1b82ad8c9a9be516 Mon Sep 17 00:00:00 2001
+From: Tim Kryger <tkryger@google.com>
+Date: Fri, 30 Mar 2018 14:40:39 -0700
+Subject: [PATCH] hwcomposer: Work around overzealous fortify checks
+
+Storage for six pollfd structs is allocated on the stack in a 2d array.
+Subsequently, the address of the first element is passed to poll along
+with the same total number of fds.  At this point, the fortify dynamic
+checker, considering only one of the dimensions of the array, throws an
+error and warns that array is too small.  Since the array is actually
+sized appropriately, use a reinterpret_cast to subvert the checker.
+
+Bug: 77323983
+Change-Id: Ib88c5a00bc84b3d05be95baf57df5f522a769da4
+---
+ libhwcomposer/hwc_vsync.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/libhwcomposer/hwc_vsync.cpp b/libhwcomposer/hwc_vsync.cpp
+index 2df30bc45..5a5e8b297 100644
+--- a/libhwcomposer/hwc_vsync.cpp
++++ b/libhwcomposer/hwc_vsync.cpp
+@@ -169,7 +169,8 @@ static void *vsync_loop(void *param)
+ 
+     if (LIKELY(!ctx->vstate.fakevsync)) {
+         do {
+-            int err = poll(*pfd, (int)(num_displays * num_events), -1);
++            int err = poll(reinterpret_cast<struct pollfd *>(pfd),
++                           (int)(num_displays * num_events), -1);
+             if(err > 0) {
+                 for (int dpy = HWC_DISPLAY_PRIMARY; dpy < num_displays; dpy++) {
+                     for(size_t ev = 0; ev < num_events; ev++) {
